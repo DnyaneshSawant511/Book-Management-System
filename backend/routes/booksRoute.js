@@ -1,7 +1,10 @@
 import express from "express";
 import { Book } from "../models/bookModel.js";
 
+//express router
 const router = express.Router();
+
+//use of /books here is redundant, only /
 
 //Route to save a new book
 router.post('/', async (req, res) => {
@@ -98,4 +101,5 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
+//exporting router
 export default router;

@@ -33,6 +33,7 @@ app.get('/', (req, res) => {
     return response.status(234).send('Book Management');
 });
 
+//middleware to redirect all /books routes to booksRoute
 app.use('/books', booksRoute);
 
 mongoose.connect(mongoDBURL)
