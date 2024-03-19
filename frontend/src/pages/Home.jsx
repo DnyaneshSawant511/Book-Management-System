@@ -35,32 +35,32 @@ const Home = () => {
                 ) : (
 
                     <table className="w-full border-separate border-spacing-2">
-                        <thead>
+                        <thead className="bg-gray-200 border-b-2 border-gray-200">
                             <tr>
-                                <th className="border-slate-600 rounded-md">No</th>
-                                <th className="border-slate-600 rounded-md">Title</th>
-                                <th className="border-slate-600 rounded-md max-md:hidden">Author</th>
-                                <th className="border-slate-600 rounded-md max-md:hidden">Publish Year</th>
-                                <th className="border-slate-600 rounded-md">Operations</th>
+                                <th className="border-slate-600 rounded-md p-3 text-sm font-semibold tracking-wide text-left">No</th>
+                                <th className="border-slate-600 rounded-md p-3 text-sm font-semibold tracking-wide text-left">Title</th>
+                                <th className="border-slate-600 rounded-md max-md:hidden p-3 text-sm font-semibold tracking-wide text-left">Author</th>
+                                <th className="border-slate-600 rounded-md max-md:hidden p-3 text-sm font-semibold tracking-wide text-left">Publish Year</th>
+                                <th className="border-slate-600 rounded-md p-3 text-sm font-semibold tracking-wide text-left">Operations</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
                                 books.map((book, index) => (
                                     <tr key={book._id} className="h-8">
-                                        <td className="border border-slate-700 rounded-md text-center">
+                                        <td className="border border-slate-700 rounded-md text-center p-3 text-sm font-medium">
                                             {index + 1}
                                         </td>
-                                        <td className="border border-slate-700 rounded-md text-center">
+                                        <td className="border border-slate-700 rounded-md text-center p-3 text-sm font-medium">
                                             {book.title}
                                         </td>
-                                        <td className="border border-slate-700 rounded-md text-center max-md:hidden">
+                                        <td className="border border-slate-700 rounded-md text-center max-md:hidden p-3 text-sm font-medium">
                                             {book.author}
                                         </td>
-                                        <td className="border border-slate-700 rounded-md text-center max-md:hidden">
+                                        <td className="border border-slate-700 rounded-md text-center max-md:hidden p-3 text-sm font-medium">
                                             {book.publishYear}
                                         </td>
-                                        <td className="border border-slate-700 rounded-md text-center">
+                                        <td className="border border-slate-700 rounded-md text-center p-3 text-sm font-medium">
                                             <div className="flex justify-center gap-x-4">
                                                 <Link to={`/books/details/${book._id}`}>
                                                     <BsInfoCircle className='text-2xl text-green-800' />
