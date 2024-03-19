@@ -25,7 +25,7 @@ const Home = () => {
         <div className="p-4">
             <div className="flex justify-between items-center bg-gray-100 py-4 px-6 shadow-md rounded-lg mb-4">
                 <h1 className="text-3xl text-gray-800 font-semibold inline-flex items-center font-serif">
-                    <span className="text-sky-500 text-4xl mr-2">📚</span> Books List
+                    <span className="text-sky-500 text-4xl mr-2">📚</span> Book Management System
                 </h1>
                 <Link to='/books/create' className="flex items-center justify-center bg-sky-500 hover:bg-sky-600 text-white text-2xl rounded-full w-12 h-12">
                     <MdOutlineAddBox />
